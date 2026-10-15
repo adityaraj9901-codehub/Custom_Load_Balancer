@@ -1,0 +1,18 @@
+{
+  "name": "zen-lb",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Production-grade, zero-dependency L7 load balancer / reverse proxy for Node.js",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "example": "node examples/upstream.js",
+    "test": "node test/smoke.test.js"
+  },
+  "license": "MIT"
+}

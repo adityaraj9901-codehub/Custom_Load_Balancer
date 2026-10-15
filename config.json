@@ -1,0 +1,47 @@
+{
+  "host": "0.0.0.0",
+  "port": 8082,
+  "algorithm": "weighted-round-robin",
+  "logLevel": "info",
+  "gracefulShutdownMs": 10000,
+  "upstreams": [
+    { "url": "http://127.0.0.1:9001", "weight": 3 },
+    { "url": "http://127.0.0.1:9002", "weight": 1 },
+    { "url": "http://127.0.0.1:9003", "weight": 1 }
+  ],
+  "healthCheck": {
+    "enabled": true,
+    "path": "/health",
+    "method": "GET",
+    "intervalMs": 5000,
+    "timeoutMs": 2000,
+    "unhealthyThreshold": 2,
+    "healthyThreshold": 2
+  },
+  "circuitBreaker": {
+    "failureThreshold": 5,
+    "cooldownMs": 10000
+  },
+  "proxy": {
+    "timeoutMs": 30000,
+    "socketTimeoutMs": 0,
+    "retries": 2,
+    "passHostHeader": false,
+    "trustProxy": false
+  },
+  "keepAlive": {
+    "enabled": true,
+    "maxSockets": 256,
+    "maxFreeSockets": 64,
+    "timeoutMs": 30000
+  },
+  "server": {
+    "keepAliveTimeoutMs": 65000,
+    "headersTimeoutMs": 66000
+  },
+  "admin": {
+    "enabled": true,
+    "path": "/__lb",
+    "token": null
+  }
+}
