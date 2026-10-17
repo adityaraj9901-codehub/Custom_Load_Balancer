@@ -3,6 +3,7 @@ import https from 'node:https';
 import net from 'node:net';
 import tls from 'node:tls';
 import { randomUUID } from 'node:crypto';
+import { Buffer } from 'node:buffer';
 
 // Headers that describe a single hop and must not be forwarded verbatim.
 const HOP_BY_HOP = new Set([
