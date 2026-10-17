@@ -1,4 +1,4 @@
-// End-to-end smoke test — no test framework required: `node test/smoke.test.js`.
+import process from 'node:process';
 import http from 'node:http';
 import assert from 'node:assert/strict';
 import { createLoadBalancer } from '../src/server.js';
