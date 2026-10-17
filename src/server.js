@@ -1,3 +1,4 @@
+import process from 'node:process';
 import http from 'node:http';
 import { pathToFileURL } from 'node:url';
 import { loadConfig } from './config.js';
