@@ -1,3 +1,5 @@
+import process from 'node:process';
+
 // Minimal structured (JSON) logger — zero dependencies.
 // One line per event to stdout/stderr so it plays nicely with container log shippers.
 
