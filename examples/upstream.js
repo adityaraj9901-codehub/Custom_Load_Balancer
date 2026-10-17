@@ -1,3 +1,4 @@
+import process from 'node:process';
 // Tiny backend servers to exercise the load balancer locally.
 // Usage: node examples/upstream.js [port ...]   (defaults: 9001 9002 9003)
 import http from 'node:http';
